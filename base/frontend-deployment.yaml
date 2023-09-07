@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-app
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: react-app
+  template:
+    metadata:
+      labels:
+        app: react-app
+    spec:
+      containers:
+        - name: react-app
+          image: 838688157549.dkr.ecr.ap-northeast-2.amazonaws.com/react-frontend:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80

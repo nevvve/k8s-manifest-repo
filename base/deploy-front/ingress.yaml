@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: "react-app"
+    namespace: default
+    annotations:
+      kubernetes.io/ingress.class: alb
+      alb.ingress.kubernetes.io/scheme: internet-facing
+      alb.ingress.kubernetes.io/target-type: instance
+      alb.ingress.kubernetes.io/subnets: subnet-0ac680230587ddafa,subnet-035660690fd31ccd8
+      alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:838688157549:certificate/e63e0523-effb-411a-bc9f-b8c6c45c34cb
+      alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
+      alb.ingress.kubernetes.io/tls-redirect: '443'
+spec:
+    rules:
+    - host: "nevve.net"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: "react-app"
+                port:
+                  number: 80
