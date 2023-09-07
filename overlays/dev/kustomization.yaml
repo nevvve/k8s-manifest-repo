@@ -4,8 +4,13 @@ images:
 - name: ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/react-frontend
   newName: ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/react-frontend
   newTag: abcdefg
+- name: ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/nodejs-backend
+  newName: ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/nodejs-backend
+  newTag: abcdefg
 resources:
 - ../../base
 patchesStrategicMerge:
 - front-deployment-patch.yaml
 - front-service-patch.yaml
+- back-service-patch.yaml
+- back-deployment-patch.yaml
