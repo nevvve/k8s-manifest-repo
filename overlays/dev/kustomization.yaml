@@ -12,7 +12,7 @@ images:
   newTag: 0cec5827
 - name: 838688157549.dkr.ecr.ap-northeast-2.amazonaws.com/react-frontend
   newName: 838688157549.dkr.ecr.ap-northeast-2.amazonaws.com/react-frontend
-  newTag: c818f93c
+  newTag: 0cec5827
 resources:
 - ../../base
 patchesStrategicMerge:
