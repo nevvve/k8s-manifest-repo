@@ -9,7 +9,7 @@ images:
   newTag: abcdefg
 - name: 838688157549.dkr.ecr.ap-northeast-2.amazonaws.com/nodejs-backend
   newName: 838688157549.dkr.ecr.ap-northeast-2.amazonaws.com/nodejs-backend
-  newTag: ba961092
+  newTag: c762e79b
 - name: 838688157549.dkr.ecr.ap-northeast-2.amazonaws.com/react-frontend
   newName: 838688157549.dkr.ecr.ap-northeast-2.amazonaws.com/react-frontend
   newTag: ba961092
